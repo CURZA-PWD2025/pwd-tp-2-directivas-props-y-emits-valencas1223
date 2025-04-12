@@ -39,7 +39,7 @@
         <p><strong>Director:</strong> {{ movie.director }}</p>
         <p><strong>Likes:</strong> {{ likes }}</p>
   
-        <button @click="toggleLike" class="like-button">
+        <button @click="toggleLike" class="like-button" :class="{active: userLiked}">
           {{ userLiked ? " Quitar Me Gusta" : " Dar Me Gusta" }}
         </button>
       </div>
@@ -71,15 +71,21 @@
     margin-top: 10px;
   }
   .like-button {
-    background-color: #007bff;
-    color: rgb(221, 217, 0);
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  .like-button:hover {
-    background-color: #000000;
-  }
+  background-color: #0059b8;
+  color: rgb(221, 217, 0);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+
+  transition: background-color 0.3s;
+}
+
+.like-button:hover {
+  background-color: #000000;
+}
+
+.like-button.active {
+  background-color: rgb(153, 3, 3); 
+}
   </style>
