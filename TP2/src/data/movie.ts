@@ -1,4 +1,4 @@
-import type { Pelicula } from "./Pelicula";
+import type { Pelicula } from "../interface/Pelicula";
 
 
 const movies: Pelicula[] = [

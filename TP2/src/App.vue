@@ -1,8 +1,8 @@
 <script lang="ts">
   import { defineComponent, ref } from "vue";
-  import moviesData from "./movie";
-  import MovieCard from "./cardcomp.vue";
-  import type { Pelicula } from "./Pelicula";
+  import moviesData from "./data/movie";
+  import MovieCard from "./components/cardcomp.vue";
+  import type { Pelicula } from "./interface/Pelicula";
   
   export default defineComponent({
     components: { MovieCard },
@@ -47,7 +47,7 @@
 .container {
   text-align: center;
   margin-top: 20px;
-  background-image: url("./istockphoto-924212560-612x612.webp"); 
+  background-image: url("./assets/istockphoto-924212560-612x612.webp"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
